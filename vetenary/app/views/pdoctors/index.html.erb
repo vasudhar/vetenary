@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pdoctors</h1>
+
+<table>
+  <thead>
+    <tr>
+	  <th>ID</th>
+      <th>Nameofpet</th>
+      <th>Breed</th>
+      <th>Age</th>
+      <th>Weight</th>
+      <th>Dateofvist</th>
+      <th colspan="3"></th>
+	  <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pdoctors.each do |pdoctor| %>
+      <tr>
+	    <td><%= pdoctor.id %></td>
+        <td><%= pdoctor.nameofpet %></td>
+        <td><%= pdoctor.breed %></td>
+        <td><%= pdoctor.age %></td>
+        <td><%= pdoctor.weight %></td>
+        <td><%= pdoctor.dateofvist %></td>
+        <td><%= link_to 'Show', pdoctor %></td>
+        <td><%= link_to 'Edit', edit_pdoctor_path(pdoctor) %></td>
+        <td><%= link_to 'Destroy', pdoctor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<td><%= link_to 'New pet', new_pet_path(:pdoctor_id => pdoctor.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pdoctor', new_pdoctor_path %>

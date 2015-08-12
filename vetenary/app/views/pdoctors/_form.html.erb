@@ -1,0 +1,37 @@
+<%= form_for(@pdoctor) do |f| %>
+  <% if @pdoctor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pdoctor.errors.count, "error") %> prohibited this pdoctor from being saved:</h2>
+
+      <ul>
+      <% @pdoctor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nameofpet %><br>
+    <%= f.text_field :nameofpet %>
+  </div>
+  <div class="field">
+    <%= f.label :breed %><br>
+    <%= f.text_field :breed %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :dateofvist %><br>
+    <%= f.datetime_select :dateofvist %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

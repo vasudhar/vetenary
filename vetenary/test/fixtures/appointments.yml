@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dateofvisit: 2015-08-12 12:39:13
+  pet_id: 1
+  doctor_id: 1
+  reason: MyString
+
+two:
+  dateofvisit: 2015-08-12 12:39:13
+  pet_id: 1
+  doctor_id: 1
+  reason: MyString

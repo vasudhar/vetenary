@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nameofpet:</strong>
+  <%= @pdoctor.nameofpet %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @pdoctor.type %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @pdoctor.breed %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @pdoctor.age %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @pdoctor.weight %>
+</p>
+
+<p>
+  <strong>Dateofvist:</strong>
+  <%= @pdoctor.dateofvist %>
+</p>
+
+<%= link_to 'Edit', edit_pdoctor_path(@pdoctor) %> |
+<%= link_to 'Back', pdoctors_path %>
